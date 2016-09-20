@@ -21,10 +21,12 @@ module CarrierWave
           # of file for any particular version
           #instance_variable_set('@filename', "#{filename}.webp")
 
+=begin
           storage.store! SanitizedFile.new({
                                                tempfile: webp_path, filename: webp_path,
                                                content_type: 'image/webp'
                                            })
+=end
 
           instance_variable_set('@filename', old_filename)
 
