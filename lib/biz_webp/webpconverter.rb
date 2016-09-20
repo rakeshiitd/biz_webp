@@ -16,7 +16,7 @@ module CarrierWave
           # XXX: Hacks ahead!
           # I can't find any other way to store an alomost exact copy
           # of file for any particular version
-          instance_variable_set('@filename', "#{filename}.webp")
+          #instance_variable_set('@filename', "#{filename}.webp")
 
           storage.store! SanitizedFile.new({
                                                tempfile: webp_path, filename: webp_path,
