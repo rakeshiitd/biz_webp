@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require 'webp-ffi'
+require 'carrierwave/sanitized_file'
 module BizWebp
     module Webpconverter
       def convert_to_webp(options = {})
