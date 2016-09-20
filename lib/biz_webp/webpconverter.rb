@@ -5,9 +5,10 @@ require 'carrierwave/sanitized_file'
 module CarrierWave
   module BizWebp
     module Webpconverter
-      def convert_to_webp(options = {})
+      def convert_to_webp(options = {},path)
         manipulate! do |img|
           img          = yield(img) if block_given?
+          puts path
           webp_path    = "#{img.path}.webp"
           old_filename = filename
 
