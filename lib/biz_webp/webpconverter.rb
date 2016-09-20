@@ -16,17 +16,20 @@ module CarrierWave
           puts "hey--->"
           puts webp_path.to_s()
 
+          puts "filename--->"
+          puts old_filename
+
+          puts "newfilename"
+
           # XXX: Hacks ahead!
           # I can't find any other way to store an alomost exact copy
           # of file for any particular version
           #instance_variable_set('@filename', "#{filename}.webp")
 
-=begin
           storage.store! SanitizedFile.new({
                                                tempfile: webp_path, filename: webp_path,
                                                content_type: 'image/webp'
                                            })
-=end
 
           instance_variable_set('@filename', old_filename)
 
