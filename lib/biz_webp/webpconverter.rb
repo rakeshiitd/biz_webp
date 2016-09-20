@@ -34,7 +34,7 @@ module CarrierWave
 
           instance_variable_set('@filename', old_filename)
 
-          img
+          ::MiniMagick::Image.open(webp_path)
         end
       end
     end
