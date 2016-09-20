@@ -13,6 +13,9 @@ module CarrierWave
 
           ::WebP.encode(img.path, webp_path, options)
 
+          puts "hey--->"
+          puts webp_path.to_s()
+
           # XXX: Hacks ahead!
           # I can't find any other way to store an alomost exact copy
           # of file for any particular version
