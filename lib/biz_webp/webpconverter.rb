@@ -9,7 +9,7 @@ module CarrierWave
         manipulate! do |img|
           img          = yield(img) if block_given?
           puts path
-          webp_path    = "#{img.path}.webp"
+          webp_path    = path+"#{img.path}.webp"
           old_filename = filename
 
           puts "image current_path"
