@@ -2,7 +2,8 @@
 
 require 'webp-ffi'
 require 'carrierwave/sanitized_file'
-module BizWebp
+module CarrierWave
+  module BizWebp
     module Webpconverter
       def convert_to_webp(options = {})
         manipulate! do |img|
@@ -28,4 +29,5 @@ module BizWebp
         end
       end
     end
+  end
 end
