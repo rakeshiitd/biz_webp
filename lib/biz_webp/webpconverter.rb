@@ -4,13 +4,17 @@ require 'webp-ffi'
 require 'carrierwave/sanitized_file'
 module CarrierWave
   module BizWebp
-    module Webpconverter
+    module Webpconverter extend CarrierWave::MiniMagick
       def convert_to_webp(options = {},path)
         manipulate! do |img|
           img          = yield(img) if block_given?
           puts path
           webp_path    = "#{img.path}.webp"
           old_filename = filename
+
+          puts "image current_path"
+
+          puts current_path
 
           ::WebP.encode(img.path, webp_path, options)
 
